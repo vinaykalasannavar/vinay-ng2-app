@@ -8,14 +8,14 @@ export class HeroService {
 	constructor() {
 		this.heroes = [
 			new Hero(1, 'Vinay'),
-			new Hero(2, 'Vishal'),
-			new Hero(3, 'Sneh'),
-			new Hero(4, 'Nandini'),
-			new Hero(5, 'Deka Amma!'),
-			new Hero(6, 'Madhu'),
-			new Hero(7, 'Veer'),
+			new Hero(2, 'Don Kojo'),
+			new Hero(3, 'S!'),
+			new Hero(4, 'Igginarayanan'),
+			new Hero(5, 'Sloppy balla!'),
+			new Hero(6, 'Yahu'),
+			new Hero(7, 'Roopa'),
 			new Hero(8, 'Daddy'),
-			new Hero(9, 'Mummy'),
+			new Hero(9, ''),
 			new Hero(10, 'Navalgatti Ajja'),
 		]
 	}
