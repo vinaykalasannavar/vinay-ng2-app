@@ -1,0 +1,13 @@
+<div *ngIf="friend">
+	
+	<h2>Selected happy friend, [{{friend.name}}]'s details: </h2>
+
+	<div><label>ID:</label> <span> {{friend.id}} </span>  </div>
+	<div><label>Name:</label> <span> {{friend.name}} </span>  </div>
+
+	<label>Do you want to change your friend's name?</label>
+	<input [(ngModel)]="friend.name" placeholder="name">
+</div>
+<div *ngIf="!friend">
+	No Friend assigned to me!
+</div>

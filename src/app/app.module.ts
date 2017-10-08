@@ -2,23 +2,22 @@ import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HeroesComponent } from './heroes.component';
-import { HeroDetailComponent } from './hero.detail.component';
+import { FriendsComponent } from './friends.component';
+import { FriendDetailComponent } from './friend.detail.component';
 
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
-    HeroDetailComponent
+    FriendsComponent,
+    FriendDetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,RouterModule.forRoot([{
-      path : 'heroes',
-      component : HeroesComponent,
-    }])
+      path : 'friends',
+      component : FriendsComponent    }])
   ],
   providers: [],
   bootstrap: [AppComponent]
