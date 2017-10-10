@@ -26,4 +26,8 @@ export class FriendDetailComponent implements OnInit {
 		  .switchMap((params: ParamMap) => this.friendService.getFriend(+params.get('id')))
 		  .subscribe(friend => this.friend = friend);
 	}
+
+	goBack(): void {
+		this.location.back();
+	}
 }

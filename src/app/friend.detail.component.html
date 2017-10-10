@@ -8,6 +8,9 @@
 	<label>Do you want to change your friend's name?</label>
 	<input [(ngModel)]="friend.name" placeholder="name">
 </div>
+
 <div *ngIf="!friend">
-	No Friend assigned to me!
+	<h2>No Friend here mate!</h2>
 </div>
+
+<button (click)="goBack()">Back</button>

@@ -1,24 +1,13 @@
+
 <div>
-	<friend-detail [friend]="selectedFriend"></friend-detail>
+	Here are all your heroes:
 </div>
 
-<div *ngIf="selectedFriend">
-	
-	<h2>Selected rising friend, [{{selectedFriend.name}}]'s details: </h2>
-
-	<div><label>ID:</label> <span> {{selectedFriend.id}} </span>  </div>
-	<div><label>Name:</label> <span> {{selectedFriend.name}} </span>  </div>
-
-	<label>Do you want to change your friend's name?</label>
-	<input [(ngModel)]="selectedFriend.name" placeholder="name">
-</div>
-
-Here are all your heroes:
-<div *ngFor="let f of friends">
-	<div (click)="chooseFriend(f)">
+<a *ngFor="let f of friends" [routerLink]="['/friend', f.id]" class="col-1-4">
+	<div>
 		<div><label>ID:</label> <span> {{f.id}} </span>  </div>
 		<div><label>Name:</label> <span> {{f.name}} </span>  </div>
 	</div>
-</div>
+</a>
 
 <div><button (click)="makeNewFriend()">Make friends</button></div>
