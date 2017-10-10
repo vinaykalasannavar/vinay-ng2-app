@@ -1,7 +1,7 @@
 import { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
 import { Friend } from './friend';
-import { FriendService } from './friends.service';
+import { FriendService } from './friend.service';
 import { FriendDetailComponent } from './friend.detail.component';
 
 @Component({
