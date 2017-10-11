@@ -21,12 +21,11 @@ export class FriendService {
 	}
 
 	getFriends(): Promise < Friend[] > {
-		return Promise.resolve(this.friends);
-
-		// return new Promise(resolve => {
-		// 	setTimeout(() => { console.log(`resolving promise at ${new Date}`);
-		// 		return this.friends; }, 2500)
-		// });
+		//Simulate network latency.
+		return new Promise(resolve => {
+			setTimeout(() => { console.log(`resolving promise at ${new Date}`);
+				resolve(this.friends) ; }, 2500)
+		});
 	}
 
 	getFriend(id): Promise < Friend > {
