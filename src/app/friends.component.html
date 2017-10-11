@@ -3,11 +3,13 @@
 	Here are all your heroes:
 </div>
 
-<a *ngFor="let f of friends" [routerLink]="['/friend', f.id]" class="col-1-4">
-	<div>
-		<div><label>ID:</label> <span> {{f.id}} </span>  </div>
+<div *ngFor="let f of friends" class="col-1-4">
+	<div (click)="chooseFriend(f)">
+		<!-- <div><label>ID:</label> <span> {{f.id}} </span>  </div> -->
 		<div><label>Name:</label> <span> {{f.name}} </span>  </div>
 	</div>
-</a>
+</div>
 
 <div><button (click)="makeNewFriend()">Make friends</button></div>
+
+<friend-detail [friend]="selectedFriend"></friend-detail>
